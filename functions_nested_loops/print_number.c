@@ -1,5 +1,5 @@
-#include <unistd.h>
 #include "main.h"
+#include <unistd.h>
 
 /**
  * print_number - prints an integer using write
