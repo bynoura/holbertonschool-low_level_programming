@@ -1,30 +1,21 @@
-#include <stdio.h>
+#include "main.h"
+#include <unistd.h>
 
 /**
  * print_to_98 - prints all natural numbers from n to 98
- * @n: starting number
- *
- * Description: prints numbers separated by comma and space,
- * starting from n to 98 inclusive, followed by a new line.
+ * @n: the starting number
  */
 void print_to_98(int n)
 {
-	if (n <= 98)
+	while (n != 98)
 	{
-		while (n < 98)
-		{
-			printf("%d, ", n);
+		print_number(n);
+		write(1, ", ", 2);
+		if (n < 98)
 			n++;
-		}
-		printf("%d\n", 98);
-	}
-	else
-	{
-		while (n > 98)
-		{
-			printf("%d, ", n);
+		else
 			n--;
-		}
-		printf("%d\n", 98);
 	}
+	print_number(98);
+	write(1, "\n", 1);
 }
