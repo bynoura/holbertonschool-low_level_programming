@@ -6,26 +6,28 @@
  */
 void print_triangle(int size)
 {
-    int row, space, hash;
+	int row, space, hash;
 
-    if (size <= 0)
-    {
-        _putchar('\n');
-        return;
-    }
+	if (size <= 0)
+	{
+		_putchar('\n');
+		return;
+	}
 
-    for (row = 1; row <= size; row++)
-    {
-        /* print spaces */
-        for (space = size - row; space > 0; space--)
-        {
-            _putchar(' ');
-        }
-        /* print hashes */
-        for (hash = 1; hash <= row; hash++)
-        {
-            _putchar('#');
-        }
-        _putchar('\n');
-    }
+	for (row = 1; row <= size; row++)
+	{
+		/* print spaces */
+		for (space = size - row; space > 0; space--)
+		{
+			_putchar(' ');
+		}
+		/* print hashes */
+		for (hash = 1; hash <= row; hash++)
+		{
+			_putchar('#');
+		}
+		_putchar('\n');
+	}
 }
+:set noexpandtab
+:retab!
