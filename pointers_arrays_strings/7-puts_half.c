@@ -1,16 +1,37 @@
 #include "main.h"
+
 /**
-* puts_half - Prints half of a string
-* @str: The string to print
-* Return: void
-*/
+ * puts_half - prints half of a string, followed by a new line
+ * @str: pointer to the string
+ *
+ * Return: void
+ */
 void puts_half(char *str)
 {
-int j = 0, i;
-while (str[j] != '\0.')
-j++
-for (i = (j + 1) / 2; i < j; i++)
-_putchar(str[i]);
+	int len = 0;
+	int i;
 
-_putchar('\n');
+	/* احسب طول النص */
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+
+	/* حدد البداية */
+	if (len % 2 == 0)
+	{
+		i = len / 2;
+	}
+	else
+	{
+		i = (len + 1) / 2;
+	}
+
+	/* اطبع من i إلى نهاية النص */
+	while (i < len)
+	{
+		_putchar(str[i]);
+		i++;
+	}
+	_putchar('\n');
 }
